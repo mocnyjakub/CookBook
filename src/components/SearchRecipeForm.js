@@ -48,6 +48,18 @@ const StyledLabel = styled.label`
   font-size: 1.5rem;
   font-weight: 700;
 `;
+const StyledSelect = styled.select`
+  border: none;
+  outline: none;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: #ffc107;
+  border-radius: 10px;
+  &:focus {
+    background-color: #ffc107;
+  }
+`;
 const SearchRecipeForm = ({ getRecipes }) => {
   return (
     <FormWrapper onSubmit={getRecipes}>
@@ -64,11 +76,11 @@ const SearchRecipeForm = ({ getRecipes }) => {
       <StyledLabel htmlFor="recipeNumber">
         Choose number of recipes:{" "}
       </StyledLabel>
-      <select name="recipeNumber" id="recipeNumber">
+      <StyledSelect name="recipeNumber" id="recipeNumber">
         <option value="10">10</option>
         <option value="20">20</option>
         <option value="50">50</option>
-      </select>
+      </StyledSelect>
     </FormWrapper>
   );
 };

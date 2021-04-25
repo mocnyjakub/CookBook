@@ -17,7 +17,7 @@ const LogoLink = styled(Link)`
 export const Logo = () => {
   return (
     <LogoWrapper>
-      <LogoLink>Cookz</LogoLink>
+      <LogoLink to="/">Cookz</LogoLink>
     </LogoWrapper>
   );
 };

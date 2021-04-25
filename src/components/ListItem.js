@@ -31,7 +31,7 @@ export const ListItem = (props) => {
       <IconWrapper>
         <img src={props.icon} />
       </IconWrapper>
-      <LinkText>{props.text}</LinkText>
+      <LinkText to={props.to}>{props.text}</LinkText>
     </Wrapper>
   );
 };

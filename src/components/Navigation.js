@@ -19,7 +19,7 @@ const NavigationWrapper = styled.div`
   position: relative;
   overflow-x: hidden;
 
-  &::after {
+  /* &::after {
     content: "";
     display: block;
     position: absolute;
@@ -32,7 +32,7 @@ const NavigationWrapper = styled.div`
     background-position: center;
     background-size: cover;
     transform: rotate(180deg);
-  }
+  } */
 `;
 
 export const Navigation = () => {

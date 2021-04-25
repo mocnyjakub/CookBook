@@ -22,8 +22,8 @@ export const NavigationList = () => {
   return (
     <NavigationListWrapper>
       <Title>Discover</Title>
-      <ListItem icon={listIcon} text="Home" />
-      <ListItem icon={searchIcon} text="Browse" />
+      <ListItem to="/" icon={listIcon} text="Home" />
+      <ListItem to="/browse" icon={searchIcon} text="Browse" />
       <ListItem icon={loveIcon} text="Favorite" />
     </NavigationListWrapper>
   );

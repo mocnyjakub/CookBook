@@ -54,9 +54,16 @@ const Root = () => {
         <GlobalStyle />
         <Layout>
           <Navigation />
-          <Main>
-            <SearchRecipeForm getRecipes={getRecipes} />
-          </Main>
+          <Switch>
+            <Main>
+              <Route exact path="/">
+                <SearchRecipeForm getRecipes={getRecipes} />
+              </Route>
+              <Route path="/browse">
+                <h1>Browse</h1>
+              </Route>
+            </Main>
+          </Switch>
         </Layout>
       </ThemeProvider>
     </Router>
