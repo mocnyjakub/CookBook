@@ -25,13 +25,15 @@ const LinkText = styled(Link)`
   font-weight: 500;
 `;
 
-export const ListItem = (props) => {
+const NavigationListItem = ({ to, icon, text }) => {
   return (
     <Wrapper>
       <IconWrapper>
-        <img src={props.icon} />
+        <img src={icon} alt={text} />
       </IconWrapper>
-      <LinkText to={props.to}>{props.text}</LinkText>
+      <LinkText to={to}>{text}</LinkText>
     </Wrapper>
   );
 };
+
+export default NavigationListItem;

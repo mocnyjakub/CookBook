@@ -14,10 +14,12 @@ const LogoLink = styled(Link)`
   font-size: 2rem;
 `;
 
-export const Logo = () => {
+const Logo = () => {
   return (
     <LogoWrapper>
       <LogoLink to="/">Cookz</LogoLink>
     </LogoWrapper>
   );
 };
+
+export default Logo;

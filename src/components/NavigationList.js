@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { ListItem } from "../components/ListItem";
+import NavigationListItem from "../components/NavigationListItem";
 import listIcon from "../assets/images/list.svg";
 import searchIcon from "../assets/images/search.svg";
 import loveIcon from "../assets/images/love.svg";
+import { routes } from "../routes";
+import { navigationListItemTypes } from "../helpers/navigationListItemTypes";
 
 const NavigationListWrapper = styled.div`
   display: flex;
@@ -18,13 +20,27 @@ const Title = styled.h2`
   padding-bottom: 20px;
 `;
 
-export const NavigationList = () => {
+const NavigationList = () => {
   return (
     <NavigationListWrapper>
       <Title>Discover</Title>
-      <ListItem to="/" icon={listIcon} text="Home" />
-      <ListItem to="/browse" icon={searchIcon} text="Browse" />
-      <ListItem icon={loveIcon} text="Favorite" />
+      <NavigationListItem
+        to={routes.home}
+        icon={listIcon}
+        text={navigationListItemTypes.home}
+      />
+      <NavigationListItem
+        to="/browse"
+        icon={searchIcon}
+        text={navigationListItemTypes.browse}
+      />
+      <NavigationListItem
+        to={routes.favRecipes}
+        icon={loveIcon}
+        text={navigationListItemTypes.favorite}
+      />
     </NavigationListWrapper>
   );
 };
+
+export default NavigationList;

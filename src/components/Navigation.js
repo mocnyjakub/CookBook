@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Logo } from "../components/Logo";
-import { NavigationList } from "../components/NavigationList";
+import Logo from "../components/Logo";
+import NavigationList from "../components/NavigationList";
 import background from "../assets/images/Group 2.png";
 
 const NavigationWrapper = styled.div`
   grid-column: 1/2;
   display: flex;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   padding: 30px 0 0 30px;
   flex-direction: column;
   align-items: flex-start;
@@ -35,7 +36,7 @@ const NavigationWrapper = styled.div`
   } */
 `;
 
-export const Navigation = () => {
+const Navigation = () => {
   return (
     <NavigationWrapper>
       <Logo />
@@ -43,3 +44,4 @@ export const Navigation = () => {
     </NavigationWrapper>
   );
 };
+export default Navigation;
