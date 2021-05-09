@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  position: relative;
+  max-width: 400px;
+`;
+
 export const RecipeListItemWrapper = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow: hidden;
-  max-width: 400px;
+  /* max-width: 400px; */
 `;
 
 export const TextWrapper = styled.div`
@@ -43,9 +48,10 @@ export const AddToFavButton = styled.button`
   font-family: "Open Sans";
   position: absolute;
   top: 0;
-  right: 0;
+  right: 10px;
   cursor: pointer;
   background-color: #111;
   color: #fff;
   font-weight: 500;
+  z-index: 3;
 `;

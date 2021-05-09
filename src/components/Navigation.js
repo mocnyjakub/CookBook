@@ -8,8 +8,7 @@ const NavigationWrapper = styled.div`
   grid-column: 1/2;
   display: flex;
   width: 100%;
-  /* height: 100vh; */
-  height: 100%;
+
   padding: 30px 0 0 30px;
   flex-direction: column;
   align-items: flex-start;
@@ -17,7 +16,6 @@ const NavigationWrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   background-color: ${({ theme }) => theme.colors.lightGrey};
-  position: relative;
   overflow-x: hidden;
 
   /* &::after {

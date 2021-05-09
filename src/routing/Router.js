@@ -5,6 +5,7 @@ import { routes } from "../routes";
 import MainTemplate from "../templates/MainTemplate";
 import FavRecipes from "../views/FavRecipes";
 import Home from "../views/Home";
+import SingleRecipe from "../views/SingleRecipe";
 
 const Main = styled.div`
   padding-top: 30px;
@@ -14,7 +15,6 @@ const Main = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  height: 100vh;
 `;
 
 const Router = ({ getRecipes, recipes, baseImgUrl }) => {
@@ -35,6 +35,7 @@ const Router = ({ getRecipes, recipes, baseImgUrl }) => {
               )}
             />
             <Route path={routes.favRecipes} component={FavRecipes} />
+            <Route path={routes.singleRecipe} component={SingleRecipe} />
           </Main>
         </Switch>
       </MainTemplate>

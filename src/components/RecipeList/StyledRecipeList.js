@@ -5,7 +5,7 @@ export const StyledUl = styled.ul`
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 20px;
+  margin: 40px 20px;
 
   li {
     list-style: none;

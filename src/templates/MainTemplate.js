@@ -6,11 +6,10 @@ import { mainTheme } from "../styles/theme";
 
 const Layout = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 200px 1fr;
   overflow-x: hidden;
-  overflow-y: scroll;
   background-color: ${({ theme }) => theme.colors.lightGrey};
 `;
 

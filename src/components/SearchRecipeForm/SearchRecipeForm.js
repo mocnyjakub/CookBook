@@ -22,7 +22,7 @@ const SearchRecipeForm = ({ getRecipes }) => {
         <Button type="submit">search</Button>
       </InputWrapper>
       <StyledLabel htmlFor="recipeNumber">
-        Choose number of recipes:{" "}
+        Choose number of recipes:
       </StyledLabel>
       <StyledSelect name="recipeNumber" id="recipeNumber">
         <option value="10">10</option>

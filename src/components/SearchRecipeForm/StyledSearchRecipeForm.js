@@ -17,6 +17,9 @@ export const FormWrapper = styled.form`
 
 export const InputWrapper = styled.div`
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  border-radius: 25px;
 `;
 
 export const StyledInput = styled.input`
@@ -25,10 +28,10 @@ export const StyledInput = styled.input`
   color: #fff;
   border: none;
   outline: none;
-  background-color: #111;
+  color: #111;
+  background-color: ${({ theme }) => theme.colors.lightGrey};
 
   &::placeholder {
-    color: #fff;
     font-family: "Montserrat";
   }
 `;
@@ -39,8 +42,8 @@ export const Button = styled.button`
   border-radius: 0 25px 25px 0;
   cursor: pointer;
   text-transform: uppercase;
-  background-color: #ffc107;
-  color: #fff;
+  background-color: #c1c1c1;
+  color: #111;
   width: 100px;
   font-weight: 700;
 `;
@@ -54,10 +57,11 @@ export const StyledSelect = styled.select`
   outline: none;
   font-family: "Open Sans";
   font-size: 1rem;
+  color: #111;
   padding: 5px 10px;
-  background-color: #ffc107;
+  background-color: #c1c1c1;
   border-radius: 10px;
   &:focus {
-    background-color: #ffc107;
+    background-color: #c1c1c1;
   }
 `;
