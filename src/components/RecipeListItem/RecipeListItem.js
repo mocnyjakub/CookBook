@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   RecipeListItemWrapper,
   TextWrapper,
   ImgWrapper,
-  AddToFavButton,
   Wrapper,
 } from "./StyledRecipeListItem";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import RootContext from "../../context";
+import Button from "../Button";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: #000;
 `;
 
+//TODO:
+
 const colors = ["#DCA11B", "#F79A3A", "#C1C1C1", "#AACCB2", "#FED067"];
 
-const RecipeListItem = ({
-  id,
-  title,
-  image,
-  baseImgUrl,
-  readyInMinutes,
-  servings,
-}) => {
+const RecipeListItem = ({ id, title, image, readyInMinutes, servings }) => {
+  const context = useContext(RootContext);
+  const { baseImgUrl, addToFav } = context;
+
   return (
     <Wrapper>
       <StyledLink
@@ -48,7 +47,7 @@ const RecipeListItem = ({
           </TextWrapper>
         </RecipeListItemWrapper>
       </StyledLink>
-      <AddToFavButton>Add to fav</AddToFavButton>
+      <Button onClickFn={() => addToFav(id)}>Add to fav</Button>
     </Wrapper>
   );
 };

@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import { breakpoints } from "../../breakpoints";
 
 export const Wrapper = styled.div`
   position: relative;
   max-width: 400px;
+  ${breakpoints.tablet} {
+    max-width: 100%;
+  }
 `;
 
 export const RecipeListItemWrapper = styled.div`
@@ -10,7 +14,8 @@ export const RecipeListItemWrapper = styled.div`
   align-items: flex-start;
   justify-content: center;
   overflow: hidden;
-  /* max-width: 400px; */
+  /* width: 90vw;
+  max-width: 400px; */
 `;
 
 export const TextWrapper = styled.div`
@@ -24,6 +29,12 @@ export const TextWrapper = styled.div`
   transform: translate(-10px);
   position: relative;
   padding: 15px;
+  ${breakpoints.tablet} {
+    height: 150px;
+    width: 60%;
+    padding: 0;
+    font-size: 14px;
+  }
   p {
     margin-left: 10px;
     align-self: center;
@@ -40,18 +51,9 @@ export const ImgWrapper = styled.div`
   background-repeat: no-repeat;
   border-radius: 15px;
   overflow: hidden;
-`;
-
-export const AddToFavButton = styled.button`
-  border: none;
-  outline: none;
-  font-family: "Open Sans";
-  position: absolute;
-  top: 0;
-  right: 10px;
-  cursor: pointer;
-  background-color: #111;
-  color: #fff;
-  font-weight: 500;
-  z-index: 3;
+  ${breakpoints.tablet} {
+    /* width: 300px; */
+    width: 40%;
+    height: 150px;
+  }
 `;

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Router from "../routing/Router";
+import RootContext from "../context";
 
 const Root = () => {
   const [recipes, setRecipes] = useState([]);
+  const [favRecipes, setFavRecipes] = useState([]);
   const [baseImgUrl, setBaseImgUrl] = useState("");
 
   const getRecipes = (e) => {
@@ -23,14 +25,34 @@ const Root = () => {
       })
       .catch((err) => console.log(err));
   };
+
+  const addToFav = (recipeId) => {
+    const selectedRecipe = recipes.find((recipe) => recipe.id === recipeId);
+
+    setFavRecipes([...new Set([...favRecipes, selectedRecipe])]);
+  };
+
+  const deleteFromFav = (recipeId) => {
+    const filteredFavRecipes = favRecipes.filter(
+      (recipe) => recipe.id !== recipeId
+    );
+
+    setFavRecipes([...filteredFavRecipes]);
+  };
+
   return (
-    <>
-      <Router
-        getRecipes={getRecipes}
-        recipes={recipes}
-        baseImgUrl={baseImgUrl}
-      />
-    </>
+    <RootContext.Provider
+      value={{
+        recipes,
+        baseImgUrl,
+        favRecipes,
+        getRecipes,
+        addToFav,
+        deleteFromFav,
+      }}
+    >
+      <Router />
+    </RootContext.Provider>
   );
 };
 

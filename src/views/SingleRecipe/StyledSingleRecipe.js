@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { breakpoints } from "../../breakpoints";
 
 export const Wrapper = styled.div`
   display: flex;
   margin: 50px 50px 0;
   min-height: 500px;
-  @media (max-width: 1110px) {
+  ${breakpoints.smallDesktop} {
     flex-direction: column;
     min-height: 800px;
   }
@@ -26,8 +27,7 @@ export const TextWrapper = styled.div`
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.lightTitle};
   }
-
-  @media (max-width: 1110px) {
+  ${breakpoints.smallDesktop} {
     order: 2;
     margin-top: 50px;
   }
@@ -42,7 +42,6 @@ export const ImageWrapper = styled.div`
   position: relative;
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
   border: 3px solid #333333;
-  transition: transform ease-in-out 0.4s;
   &::after {
     content: "";
     border: 2px solid #353535;
@@ -54,8 +53,5 @@ export const ImageWrapper = styled.div`
     left: 50%;
     transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
     border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-  }
-  &:hover {
-    transform: scale(1.01);
   }
 `;

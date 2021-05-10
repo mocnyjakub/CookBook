@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
+import RootContext from "../../context";
 import {
   FormWrapper,
   InputWrapper,
   StyledInput,
-  Button,
   StyledLabel,
   StyledSelect,
 } from "./StyledSearchRecipeForm";
+import Button from "../Button";
 
-const SearchRecipeForm = ({ getRecipes }) => {
+const SearchRecipeForm = () => {
+  const context = useContext(RootContext);
+
   return (
-    <FormWrapper onSubmit={getRecipes}>
+    <FormWrapper onSubmit={context.getRecipes}>
       {/* <label htmlFor="recipeName">Type recipe name: </label> */}
       <InputWrapper>
         <StyledInput
@@ -19,7 +22,7 @@ const SearchRecipeForm = ({ getRecipes }) => {
           // id="recipeName"
           placeholder="Type recipe name here..."
         />
-        <Button type="submit">search</Button>
+        <Button submitBtn>search</Button>
       </InputWrapper>
       <StyledLabel htmlFor="recipeNumber">
         Choose number of recipes:

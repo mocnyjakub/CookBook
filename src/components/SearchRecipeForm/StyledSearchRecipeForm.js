@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { breakpoints } from "../../breakpoints";
 
 export const FormWrapper = styled.form`
-  width: 50%;
+  width: 80%;
+  max-width: 800px;
   height: 300px;
   background-color: #fff;
   margin-top: 50px;
@@ -23,6 +25,11 @@ export const InputWrapper = styled.div`
   width: 80%;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+  overflow-x: hidden;
+  ${breakpoints.tablet} {
+    width: 90%;
+  }
 `;
 
 export const StyledInput = styled.input`
@@ -40,17 +47,6 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const Button = styled.button`
-  border: none;
-  outline: none;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-  text-transform: uppercase;
-  background-color: #c1c1c1;
-  color: #111;
-  width: 30%;
-  font-weight: 700;
-`;
 export const StyledLabel = styled.label`
   padding: 20px 0;
   font-size: 1.5rem;

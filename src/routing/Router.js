@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
+import { breakpoints } from "../breakpoints";
 import { routes } from "../routes";
 import MainTemplate from "../templates/MainTemplate";
 import FavRecipes from "../views/FavRecipes";
@@ -15,25 +16,19 @@ const Main = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  ${breakpoints.tablet} {
+    grid-column: 1/2;
+    grid-row-start: 1;
+  }
 `;
 
-const Router = ({ getRecipes, recipes, baseImgUrl }) => {
+const Router = () => {
   return (
     <BrowserRouter>
       <MainTemplate>
         <Switch>
           <Main>
-            <Route
-              exact
-              path={routes.home}
-              component={() => (
-                <Home
-                  getRecipes={getRecipes}
-                  recipes={recipes}
-                  baseImgUrl={baseImgUrl}
-                />
-              )}
-            />
+            <Route exact path={routes.home} component={Home} />
             <Route path={routes.favRecipes} component={FavRecipes} />
             <Route path={routes.singleRecipe} component={SingleRecipe} />
           </Main>

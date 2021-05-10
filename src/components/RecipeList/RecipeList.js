@@ -2,12 +2,12 @@ import React from "react";
 import RecipeListItem from "../RecipeListItem/RecipeListItem";
 import { StyledUl } from "./StyledRecipeList";
 
-const RecipeList = ({ recipes, baseImgUrl }) => {
+const RecipeList = ({ recipesArray }) => {
   return (
     <StyledUl>
-      {recipes.map((recipe) => (
+      {recipesArray.map((recipe) => (
         <li>
-          <RecipeListItem {...recipe} baseImgUrl={baseImgUrl} />
+          <RecipeListItem {...recipe} />
         </li>
       ))}
     </StyledUl>

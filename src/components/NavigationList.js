@@ -6,11 +6,15 @@ import searchIcon from "../assets/images/search.svg";
 import loveIcon from "../assets/images/love.svg";
 import { routes } from "../routes";
 import { navigationListItemTypes } from "../helpers/navigationListItemTypes";
+import { breakpoints } from "../breakpoints";
 
 const NavigationListWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  ${breakpoints.tablet} {
+    flex-direction: row;
+  }
 `;
 
 const Title = styled.h2`
@@ -18,6 +22,9 @@ const Title = styled.h2`
   font-size: 1rem;
   color: ${({ theme }) => theme.colors.lightTitle};
   padding-bottom: 20px;
+  ${breakpoints.tablet} {
+    display: none;
+  }
 `;
 
 const NavigationList = () => {
@@ -28,11 +35,6 @@ const NavigationList = () => {
         to={routes.home}
         icon={listIcon}
         text={navigationListItemTypes.home}
-      />
-      <NavigationListItem
-        to="/browse"
-        icon={searchIcon}
-        text={navigationListItemTypes.browse}
       />
       <NavigationListItem
         to={routes.favRecipes}
