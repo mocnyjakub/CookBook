@@ -6,6 +6,9 @@ export const StyledUl = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 40px 20px;
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   li {
     list-style: none;

@@ -5,7 +5,7 @@ import { routes } from "../routes";
 import MainTemplate from "../templates/MainTemplate";
 import FavRecipes from "../views/FavRecipes";
 import Home from "../views/Home";
-import SingleRecipe from "../views/SingleRecipe";
+import SingleRecipe from "../views/SingleRecipe/SingleRecipe";
 
 const Main = styled.div`
   padding-top: 30px;

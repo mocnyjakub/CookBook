@@ -20,10 +20,14 @@ export const InputWrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px,
     rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
   border-radius: 25px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 export const StyledInput = styled.input`
   padding: 10px 25px;
+  width: 70%;
   border-radius: 25px 0 0 25px;
   color: #fff;
   border: none;
@@ -44,7 +48,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   background-color: #c1c1c1;
   color: #111;
-  width: 100px;
+  width: 30%;
   font-weight: 700;
 `;
 export const StyledLabel = styled.label`
